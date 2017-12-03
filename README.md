@@ -37,8 +37,8 @@ In your template .phtml files.
 ```
 **Admin Panel Options**
 
-![Alt text](/screenshots/slider.jpg?raw=true "Slider:")
+![Alt text](/screenshots/slider.png?raw=true "Slider:")
 
-![Alt text](/screenshots/slide.jpg?raw=true "Slide:")
+![Alt text](/screenshots/slide.png?raw=true "Slide:")
 
-![Alt text](/screenshots/frontend.jpg?raw=true "Frontend:")
+![Alt text](/screenshots/frontend.png?raw=true "Frontend:")
