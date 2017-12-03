@@ -36,9 +36,11 @@ In your template .phtml files.
 ?>
 ```
 **Admin Panel Options**
-
+**Slider**
 ![Alt text](/screenshots/slider.png?raw=true "Slider:")
 
+**Slide**
 ![Alt text](/screenshots/slide.png?raw=true "Slide:")
 
+**Frontend**
 ![Alt text](/screenshots/frontend.png?raw=true "Frontend:")
