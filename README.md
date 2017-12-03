@@ -1,6 +1,8 @@
 # magento-slick-slider
 Display multiple slick image sliders on few clicks.
 
+You can call your sliders in different ways.
+
 In your layout .xml files or layout fields
 
 ```
