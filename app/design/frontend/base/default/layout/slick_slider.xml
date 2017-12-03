@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <!--
+    Default layout, loads most of the pages
+    -->
+    <default translate="label">
+        <label>All Pages</label>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>slick/jquery.min.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>slick/slick.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>slick/slick-theme.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>slick/slick.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>slick/slick-init.js</name></action>
+        </reference>
+    </default>
+</layout>

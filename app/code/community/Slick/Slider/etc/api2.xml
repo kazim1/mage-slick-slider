@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Slick_Slider extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Slick
+ * @package        Slick_Slider
+ * @copyright      Copyright (c) 2017
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <api2>
+        <resource_groups>
+            <slick_slider translate="title" module="slick_slider">
+                <title>Slider</title>
+                <sort_order>120</sort_order>
+                <children>
+                    <slick_slider_slider translate="title" module="slick_slider">
+                        <title>Slider</title>
+                        <sort_order>0</sort_order>
+                    </slick_slider_slider>
+
+                </children>
+            </slick_slider>
+        </resource_groups>
+        <resources>
+            <slick_slider_slider translate="title" module="slick_slider">
+                <group>slick_slider_slider</group>
+                <model>slick_slider/api2_slider</model>
+                <working_model>slick_slider/slider</working_model>
+                <title>Slider</title>
+                <sort_order>0</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                        <update>1</update>
+                        <delete>1</delete>
+                    </admin>
+                    <customer>
+                        <retrieve>1</retrieve>
+                    </customer>
+                    <guest>
+                        <retrieve>1</retrieve>
+                    </guest>
+                </privileges>
+                <attributes translate="entity_id name slug slides_to_show slides_to_scroll center_mode show_dots show_arrows speed rtl infinite class status" module="slick_slider">
+                    <entity_id>Id</entity_id>
+                    <name>Name</name>
+                    <slug>Slug</slug>
+                    <slides_to_show>Slides To Show</slides_to_show>
+                    <slides_to_scroll>Slides To Scroll</slides_to_scroll>
+                    <center_mode>Center Mode</center_mode>
+                    <show_dots>Show Dots</show_dots>
+                    <show_arrows>Show Arrows</show_arrows>
+                    <speed>Speed</speed>
+                    <rtl>RTL</rtl>
+                    <infinite>Infinite</infinite>
+                    <class>Style Class</class>
+                    <status>Enabled</status>
+                </attributes>
+                <routes>
+                    <route_entity>
+                        <route>/slider_sliders/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                    <route_collection>
+                        <route>/slider_sliders</route>
+                        <action_type>collection</action_type>
+                    </route_collection>
+                </routes>
+                <versions>1</versions>
+            </slick_slider_slider>
+
+        </resources>
+    </api2>
+</config>

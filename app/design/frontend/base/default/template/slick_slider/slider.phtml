@@ -1,0 +1,43 @@
+<?php
+	$_sliderCollection = $this->getSlideCollection();
+	$_slider = $this->getSlider();
+	$_sliderParams = $this->getSliderParameters();
+    $uniqueId = uniqid();
+?>
+
+<?php if($_slider->getId() && $_sliderCollection->count() > 0): ?>
+
+    <div class="slider <?php echo $_slider->getClass() ?>" id="slider-<?php echo $uniqueId ?>">
+        <?php foreach($_sliderCollection as $slide): ?>
+        <div class="<?php echo $slide->getClass() ?>" style="padding: 0px <?php echo $_sliderParams['margin']; ?>px">
+            <div class="slide-inner">
+                <?php /*if($slide->hasVideo()): ?>
+                <video class="slide-video" muted loop autoplay poster="<?php echo $slide->getPosterUrl() ?>">
+                    <source src="<?php echo $slide->getVideoUrl() ?>" type="video/mp4">
+                </video>
+                <?php endif;*/ ?>
+                <div class="slide-imagebox">
+                    <img src="<?php echo $slide->getImageUrl() ?>" alt="">
+                    <?php if($slide->getContent()): ?>
+                        <div class="slide-caption">
+                            <?php echo $slide->getContent(); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+
+    <script type="text/javascript">
+        if(typeof(registered_slick_sliders) == 'undefined') {
+            var registered_slick_sliders = [];
+        }
+
+        registered_slick_sliders.push({
+            ele: '#slider-<?php echo $uniqueId ?>',
+            params: <?php echo json_encode($_sliderParams) ?>
+        });
+    </script>
+
+<?php endif; ?>

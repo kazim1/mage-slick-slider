@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Slick_Slider extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Slick
+ * @package        Slick_Slider
+ * @copyright      Copyright (c) 2017
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Slick_Slider>
+            <version>1.0.0</version>
+        </Slick_Slider>
+    </modules>
+    <global>
+        <resources>
+            <slick_slider_setup>
+                <setup>
+                    <module>Slick_Slider</module>
+                    <class>Slick_Slider_Model_Resource_Setup</class>
+                </setup>
+            </slick_slider_setup>
+        </resources>
+        <blocks>
+            <slick_slider>
+                <class>Slick_Slider_Block</class>
+            </slick_slider>
+        </blocks>
+        <helpers>
+            <slick_slider>
+                <class>Slick_Slider_Helper</class>
+            </slick_slider>
+        </helpers>
+        <models>
+            <slick_slider>
+                <class>Slick_Slider_Model</class>
+                <resourceModel>slick_slider_resource</resourceModel>
+            </slick_slider>
+            <slick_slider_resource>
+                <class>Slick_Slider_Model_Resource</class>
+                <entities>
+                    <slider>
+                        <table>slick_slider_slider</table>
+                    </slider>
+                    <slide>
+                        <table>slick_slider_slide</table>
+                    </slide>
+                    <slide_store>
+                        <table>slick_slider_slide_store</table>
+                    </slide_store>
+                </entities>
+            </slick_slider_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <slick_slider>
+                    <file>slick_slider.xml</file>
+                </slick_slider>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Slick_Slider>
+                    <files>
+                        <default>Slick_Slider.csv</default>
+                    </files>
+                </Slick_Slider>
+            </modules>
+        </translate>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Slick_Slider before="Mage_Adminhtml">Slick_Slider_Adminhtml</Slick_Slider>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <layout>
+            <updates>
+                <slick_slider>
+                    <file>slick_slider.xml</file>
+                </slick_slider>
+            </updates>
+        </layout>
+    </frontend>
+</config>
