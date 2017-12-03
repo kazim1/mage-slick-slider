@@ -6,6 +6,8 @@ Display multiple slick image sliders on few clicks.
 - Multiple Sliders on same page
 - Fade and Slide Animation Options
 - Easily customizable
+- Multiple Store Support
+- RTL Support
 
 **Reference**
 You can handle most of the important features of slick sliders. http://kenwheeler.github.io/slick/
